@@ -24,9 +24,9 @@ class BST
         end
     end
 
-    def each(&block)
-        left.each(&block) if left
-        block.call(data)
-        right.each(&block) if right
+    def each(array=[])
+        self.left.each(array) if self.left
+        array.push(self.data)
+        self.right.each(array) if self.right
     end
 end
